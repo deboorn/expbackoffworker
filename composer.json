@@ -1,0 +1,22 @@
+{
+  "name": "deboorn/ExpBackoffWorker",
+  "description": "Adds automatic exponential backoff to Laravel 5's queue worker",
+  "keywords": ["exponential", "backoff", "laravel"],
+  "homepage": "https://github.com/deboorn/ExpBackoffWorker",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daniel Boorn",
+      "email": "daniel.boorn@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "illuminate/support": "5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ExpBackoffWorker\\": "src/"
+    }
+  }
+}
