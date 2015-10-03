@@ -9,10 +9,10 @@ How to Install
 
 ### Laravel 5.0
 
-1.  Install the `deboorn/ExpBackoffWorker` package
+1.  Install the `deboorn/expbackoffworker` package
 
     ```shell
-    $ composer require deboorn/ExpBackoffWorker
+    $ composer require deboorn/expbackoffworker
     ```
 
 1. Update `config/app.php` to activate ExpBackoffWorker
