@@ -15,7 +15,7 @@ How to Install
     $ composer require deboorn/expbackoffworker
     ```
 
-1. Update `config/app.php` to activate ExpBackoffWorker
+2. Update `config/app.php` to activate ExpBackoffWorker
 
     ```php
     # Add `QueueServiceProvider` to the `providers` array
@@ -23,5 +23,13 @@ How to Install
         ...
         'ExpBackoffWorker\QueueServiceProvider',
     )
+    ```
+3. Update `config/queue.php` to increase redis.expire to max delay + 100
 
+    ```php
+		'redis' => [
+		    ...
+			'expire' => 7300,
+		],
+    
     ```
