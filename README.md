@@ -24,12 +24,11 @@ How to Install
         ExpBackoffWorker\QueueServiceProvider::class,
     ]
     ```
-3. Update `config/queue.php` to increase redis.expire to max delay + 100
+3. Update `config/queue.php` to increase {queue-driver}.retry_after to max delay + 100, such as redis.retry_after
 
     ```php
 		'redis' => [
 		    ...
-			'expire' => 7300,
+			'retry_after' => 7300,
 		],
-    
     ```
