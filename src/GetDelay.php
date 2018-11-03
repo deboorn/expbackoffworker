@@ -9,7 +9,7 @@ class GetDelay
      * GetDelay constructor
      *
      * @param  int  $maxDelay      Maximum delay for a job (default 7200)
-     * @param  int  $defaultDelay  Default initial job delay
+     * @param  int  $defaultDelay  Default job delay multiplier if worker delay is 0
      */
     public function __construct($maxDelay = 7200, $defaultDelay = 30)
     {
