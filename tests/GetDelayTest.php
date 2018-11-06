@@ -1,11 +1,11 @@
-<?php
+<?php namespace ExpBackoffWorker;
 
 use PHPUnit\Framework\TestCase;
 use ExpBackoffWorker\GetDelay;
 
 class GetDelayTest extends TestCase
 {
-    public function test_exponential_backoff_defaults()
+    public function testExponentialBackoffDefaults()
     {
         $maxDelay = 7200;
         $getDelay = new GetDelay;
@@ -18,7 +18,7 @@ class GetDelayTest extends TestCase
         }
     }
 
-    public function test_exponential_backoff_custom_maxdelay()
+    public function testExponentialBackoffCustomMaxdelay()
     {
         $maxDelay = 3600;
         $defaultDelay = 15;
@@ -32,7 +32,7 @@ class GetDelayTest extends TestCase
         }
     }
 
-    public function test_exponential_backoff_custom_workerdelay()
+    public function testExponentialBackoffCustomWorkerdelay()
     {
         $maxDelay = 3600;
         $defaultDelay = 30;

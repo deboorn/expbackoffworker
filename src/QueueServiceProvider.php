@@ -14,7 +14,9 @@ class QueueServiceProvider extends IlluminateQueueServiceProvider
     {
         $this->app->singleton('queue.worker', function () {
             return new Worker(
-                $this->app['queue'], $this->app['events'], $this->app[ExceptionHandler::class]
+                $this->app['queue'],
+                $this->app['events'],
+                $this->app[ExceptionHandler::class]
             );
         });
     }
