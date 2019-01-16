@@ -1,31 +1,44 @@
 {
-  "name": "deboorn/expbackoffworker",
-  "description": "Adds automatic exponential backoff to Laravel 5's queue worker",
-  "keywords": ["exponential", "backoff", "laravel"],
-  "homepage": "https://github.com/deboorn/expbackoffworker",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Daniel Boorn",
-      "email": "daniel.boorn@gmail.com"
+    "name": "deboorn/expbackoffworker",
+    "description": "Adds automatic exponential backoff to Laravel 5's queue worker",
+    "keywords": ["exponential", "backoff", "laravel"],
+    "homepage": "https://github.com/deboorn/expbackoffworker",
+    "license": "Apache-2",
+    "authors": [
+        {
+            "name": "Daniel Boorn",
+            "email": "daniel.boorn@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/queue": "5.3.*|5.4.*|5.5.*|5.6.*|5.7.*",
+        "illuminate/support": "5.3.*|5.4.*|5.5.*|5.6.*|5.7.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ExpBackoffWorker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
-  ],
-  "require": {
-    "php": ">=5.6.4",
-    "illuminate/queue": "5.3.*|5.4.*|5.5.*|5.6.*|5.7.*",
-    "illuminate/support": "5.3.*|5.4.*|5.5.*|5.6.*|5.7.*"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~6.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "ExpBackoffWorker\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  }
 }
