@@ -4,9 +4,10 @@ All notable changes to `expbackoffworker` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## [2.1.0] - 2018-11-DD
+## [2.1.0] - 2019-06-06
 
 ### Added
+- Added Laravel 5.8 to list of allowed framework versions
 - Unit tests
 - Contribution-related documentation
 
