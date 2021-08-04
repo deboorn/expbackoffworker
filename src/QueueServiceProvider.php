@@ -12,16 +12,25 @@ class QueueServiceProvider extends IlluminateQueueServiceProvider
      */
     protected function registerWorker()
     {
-        $this->app->singleton('queue.worker', function () {
+        $this->app->singleton('queue.worker', function ($app) {
             $isDownForMaintenance = function () {
                 return $this->app->isDownForMaintenance();
             };
 
+            $resetScope = function () use ($app) {
+                if (method_exists($app['log']->driver(), 'withoutContext')) {
+                    $app['log']->withoutContext();
+                }
+
+                return $app->forgetScopedInstances();
+            };
+
             return new Worker(
-                $this->app['queue'],
-                $this->app['events'],
-                $this->app[ExceptionHandler::class],
-                $isDownForMaintenance
+                $app['queue'],
+                $app['events'],
+                $app[ExceptionHandler::class],
+                $isDownForMaintenance,
+                $resetScope
             );
         });
     }

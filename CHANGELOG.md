@@ -4,6 +4,15 @@ All notable changes to `expbackoffworker` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [3.0.0] - 2021-08-01
+
+### Added
+- Compatibility with Laravel 8
+
+### Removed
+- Compatibility with Laravel 5 and 6 _(use `2.X.X` instead)_
+- Compatibility with PHP 5.6 _(officially; it was broken already)_
+
 ## [2.1.0] - 2019-06-06
 
 ### Added
