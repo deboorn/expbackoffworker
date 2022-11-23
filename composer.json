@@ -12,8 +12,8 @@
     ],
     "require": {
         "php": ">=7.0",
-        "illuminate/queue": "^8.0",
-        "illuminate/support": "^8.0"
+        "illuminate/queue": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0"
